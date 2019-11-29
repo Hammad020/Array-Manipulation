@@ -1,0 +1,29 @@
+DECLARE AlphaArr : Array[1:26] of INT
+DECLARE Char : CHARACTER
+DECLARE Str1 : STRING
+
+INPUT"Enter a phrase:"
+Str1 
+
+Str1 = UCase(Str1)
+
+FOR d = 1 TO 26
+    Alphabets[d] = 0
+NEXTd
+d = 0
+
+For d = 1 TO LEN(Str1)
+    Char = MID(Str1, d, 1)
+Alphabets[(ASCII,Char)-64] = Alphabets[(ASCII,Char)-64]+1
+NEXTd
+
+d = 0
+
+FOR d = 1 TO 26
+IF Alphabets>0
+   THEN
+OUTPUT Char(d+64) & " = " & Alphabet[d]
+ENDIF
+NEXTd
+
+END
